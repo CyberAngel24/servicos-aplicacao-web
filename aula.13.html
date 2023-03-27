@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <script>
+        function visualizarMensagem(){
+            alert('Olá mundo! Minha primeira função em JavaScript!')
+        }
+        function incluirParametro(a, b){
+            alert(a + b)
+        }
+    </script>
+</head>
+<body style="background-color:lightblue;">
+    <h1 style="text-align: center;">Formulários HTML</h1>
+    <hr>
+    <h2 style="text-align: center;">Elemento Select</h2>
+    <form action="welcome.html" method="POST">
+<label for="cidades">Escolha a cidade:</label><br>
+<select id="cidades" name="cidades">
+    <option value="campinaVerde">Campina Verde</option>
+    <option value="ituiutaba">Ituiutaba</option>
+    <option value="uberlandia">Uberlândia</option>
+    <option value="uberaba">Uberaba</option>
+    <option value="#" selected>Selecione</option>
+</select>
+<hr>
+<h2 style="text-align: center;">Elemento TextArea</h2>
+<form>
+    <label for="resumo">Escreva por que escolheu a cidade acima</label><br><br>
+    <textarea id="resumo" name="resumo" style="width:400px;height:200px" placeholder="insira seu resumo aqui"></textarea>
+</form>
+<hr>
+<h2 style="text-align: center;">Elemento Button</h2>
+<form>
+    <button type="button" onclick="alert('Me chamo Otávio')">Clique aqui</button>
+    <br><br>
+    <button type="button" onclick="visualizarMensagem()">Clique aqui</button>
+    <br><br>
+    <button type="button" onclick="incluirParametro('ola ','mundo')">Clique aqui</button>
+</form>
+<hr>
+<h2 style="text-align: center;">Elemento fieldset e legend</h2>
+<form action="welcome.html">
+<fieldset>
+    <legend>Dados Pessoais:</legend>
+    <label for="nome">Primeiro nome:</label><br>
+    <input type="text" id="nome" name="nome" value="Otávio"><br>
+    <label for="cidade">Cidade:</label><br>
+    <input type="text" id="cidade" name="cidade" value="CampinaVerde"><br>
+    <input type="submit" value="submit">
+</fieldset>
+</form>
+<hr>
+<h2 style="text-align: center;">Elemento datalist</h2>
+<form action="welcome.html">
+<input list="browsers">
+<datalist id="browsers">
+    <option value="Safari">
+        <option value="Opera">
+            <option value="Chrome">
+                <option value="Firefox">
+                    <option value="Internet Explorer">
+    </datalist>
+</form>
+<br>
+<hr>
+</body>
+</html>
+
